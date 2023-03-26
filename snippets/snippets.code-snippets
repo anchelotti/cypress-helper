@@ -1,0 +1,85 @@
+{
+  "template": {
+    "prefix": "!new",
+    "body": [
+      "describe('', () => {",
+      " before(() => {",
+      " })",
+      " beforeEach(() => {",
+      " })",
+      " afterEach(() => {",
+      " })",
+      " after(() => {",
+      " })",
+      " context('', () => {",
+      "   it('', () => {",
+      "   })",
+      "   it('', () => {",
+      "   })",
+      " })",
+      "})"
+    ]
+  },
+
+  "before": {
+    "prefix": "!before",
+    "body": ["before(() => {", "})"]
+  },
+
+  "beforeEach": {
+    "prefix": "!befEach",
+    "body": ["beforeEach(() => {", "})"]
+  },
+
+  "after": {
+    "prefix": "!after",
+    "body": ["after(() => {", "})"]
+  },
+
+  "afterEach": {
+    "prefix": "!aftEach",
+    "body": ["afterEach(() => {", "})"]
+  },
+
+  "it": {
+    "prefix": "!it",
+    "body": ["it('', () => {", "})"]
+  },
+
+  "fixture": {
+    "prefix": "!fix",
+    "body": ["cy.fixture('').then((json) => {  = json; });"]
+  },
+
+  "status200": {
+    "prefix": "!stat200",
+    "body": ["expect(response.status).to.eq(200);"]
+  },
+
+  "expectProperty": {
+    "prefix": "!prop",
+    "body": ["expect(response.body).to.have.property();"]
+  },
+
+  "expectKeys": {
+    "prefix": "!key",
+    "body": ["expect(response.body).to.have.all.keys();"]
+  },
+
+  "status400": {
+    "prefix": "!stat400",
+    "body": ["expect(response.status).to.eq(400);"]
+  },
+
+  "helper": {
+    "prefix": "!helper",
+    "body": [
+      "export function() {",
+      " return cy.api({",
+      "   method: '',",
+      "   url: ``,",
+      " });",
+      "}"
+    ]
+  }
+}
